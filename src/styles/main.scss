@@ -33,6 +33,10 @@ body {
     border-radius: 2rem;
     letter-spacing: 0.075rem;
     box-shadow: 0px 10px 11.18px 1.82px rgba(207, 92, 13, 0.2);
+    transition: 0.3s ease;
+}
+.btn:hover {
+    background-color: $orange-hover;
 } 
 .wrapper {
     max-width: 1440px;
@@ -43,6 +47,30 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    position: relative;
+    &__image {
+        position: absolute;
+    }
+    &__avocado {
+        top: 47px;
+        right: 0;
+    }
+    &__beans {
+        left: -8px;
+        bottom: 0;
+    }
+    &__cucumber {
+        left: 682px;
+        top: -2px;
+    }
+    &__pepper {
+        left: 30px;
+        top: 398px;
+    }
+    &__tomato {
+        right: 113px;
+        bottom: 0;
+    }
 }
 .main {
     display: flex;
@@ -54,14 +82,15 @@ body {
         &__description {
             font-size: 1.125rem;
             line-height: 1.5;
-            margin-top: 3.75rem;
-            margin-bottom: 76px;
+            margin-top: 60px;
+            margin-bottom: 78px;
         }
     }
     &-visual {
         box-shadow: 0 0 0 22px transparent, 0 0 0 1px rgba($color: $gray, $alpha: 0.4);
         border-radius: 100%;
         padding: 52px;
+        position: relative;
         &__image {
             border: 1px solid rgba($color: $gray, $alpha: 0.4);
             border-radius: 100%;
@@ -69,6 +98,59 @@ body {
             img {
                 border-radius: 100%;
                 box-shadow: 20px 30px 30px 0px rgba($color: $gray, $alpha: 0.4);
+            }
+        }
+        &__btn {
+            background-color: transparent;
+            border: none;
+            text-align: left;
+            color: rgba($color: $gray, $alpha: 0.8);
+            position: absolute;
+            span {
+                display: block;
+                color: rgba($color: $gray, $alpha: 1.0);
+                margin-top: 5px;
+            }
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 11px;
+                height: 11px;
+                border-radius: 100%;
+                background-color: $gray;
+                box-shadow: 0 0 0 4px #FFFFFF, 0 0 0 5px $gray;
+            }
+            &:focus {
+                outline: none;
+                &::before {
+                    background-color: $orange;
+                    box-shadow: 0 0 0 4px #FFFFFF, 0 0 0 5px $orange;   
+                }
+            }
+        }
+        &__01 {
+            left: 56px;
+            top: 45px;
+            &::before {
+                left: 90px;
+                top: 23px;
+            }
+        }
+        &__02 {
+            right: -2px;
+            top: 193px;
+            &::before {
+                right: 95px;
+                top: 18px;
+            }
+        }
+        &__03 {
+            right: 239px;
+            bottom: -48px;
+            &::before {
+                right: 36px;
+                bottom: 55px;
             }
         }
     }
