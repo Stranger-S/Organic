@@ -41,6 +41,8 @@ body {
 .wrapper {
     max-width: 1440px;
     margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .section-main {
     background-image: url(../img/bg-1.png);
@@ -48,6 +50,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
+    padding-bottom: 208px;
     &__image {
         position: absolute;
     }
@@ -57,19 +60,19 @@ body {
     }
     &__beans {
         left: -8px;
-        bottom: 0;
+        bottom: 173px;
     }
     &__cucumber {
-        left: 682px;
+        left: 35.9%;
         top: -2px;
     }
     &__pepper {
         left: 30px;
-        top: 398px;
+        top: 36.3%;
     }
     &__tomato {
         right: 113px;
-        bottom: 0;
+        bottom: 136px;
     }
 }
 .main {
@@ -153,5 +156,17 @@ body {
                 bottom: 55px;
             }
         }
+    }
+}
+.section-stock {
+    background-image: url(../img/bg-2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    &__text {
+        font-size: 1.5rem;
+        margin-top:3.75rem;
+        max-width: 690px;
+        line-height: 1.5;
     }
 }
