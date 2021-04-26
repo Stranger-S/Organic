@@ -171,18 +171,22 @@ body {
     }
 }
 .slider {
-    margin-top: 94px;
-    display: flex;
-    justify-content: space-between;
+    margin-top: 90px;
+    &-child {
+        padding: 5px 10px;
+        box-sizing: border-box;
+        &:focus {
+            outline: none;
+        }
+    }
     &-item {
-        flex: 0 0 32%;
         position: relative;
         border: 1px solid rgba($color: $gray, $alpha: 0.4);
         border-radius: 20px;
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
-        min-height: 520px;
+        min-height: 518px;
         box-shadow: 0 0 0 2px rgba($color: $gray, $alpha: 0);
         transition: 0.3s ease;
         overflow: hidden;
@@ -224,7 +228,7 @@ body {
         bottom: 0;
         left: 0;
         padding: 2.875rem 2.437rem;
-        transform: translate(0, 246px);
+        transform: translate(0, 244px);
         transition: 0.4s ease;
         &__title {
             font-size: 1.875rem;
@@ -246,6 +250,9 @@ body {
             letter-spacing: 0.075rem;
             position: relative;
             padding-left: 3.125rem;
+            &:focus {
+                outline: none;
+            }
             &:hover {
                 color: rgba($color: $gray, $alpha: 1.0);
                 padding-left: 3rem;
@@ -269,4 +276,34 @@ body {
             }
         }
     }
+}
+
+.slick-prev, .slick-next {
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    top: -64px;
+    text-indent: -9999px;
+    display: block;
+    width: 10px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    transition: 0.3s ease;
+    opacity: 0.4;
+    &:hover {
+        opacity: 1;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+.slick-prev {
+    right: 80px;
+    background-image: url(../img/icons/arrow-prev.svg);
+}
+.slick-next {
+    right: 0;
+    background-image: url(../img/icons/arrow-next.svg);
 }
