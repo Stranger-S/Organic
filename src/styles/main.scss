@@ -709,12 +709,13 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding-bottom: 144px;
+    padding-bottom: 20px;
 }
 .box-form {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 160px;
     &__text {
         font-size: 1.125rem;
         line-height: 1.5;
