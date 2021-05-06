@@ -43,6 +43,9 @@ body {
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
+    @media (max-width: 1340px) {
+        max-width: 1140px;
+    }
 }
 .section-main {
     background-image: url(../img/bg-1.png);
@@ -51,16 +54,25 @@ body {
     background-position: center;
     position: relative;
     padding-bottom: 208px;
+    overflow: hidden;
     &__image {
         position: absolute;
     }
     &__avocado {
         top: 47px;
         right: 0;
+        @media (max-width: 1700px) {
+            top: 90px;
+            right: -56px;
+            width: 140px;
+        }
     }
     &__beans {
         left: -8px;
         bottom: 173px;
+        @media (max-width: 1700px) {
+            display: none;
+        }
     }
     &__cucumber {
         left: 35.9%;
@@ -69,10 +81,17 @@ body {
     &__pepper {
         left: 30px;
         top: 36.3%;
+        @media (max-width: 1700px) {
+            left: 0px;
+            top: 49.3%;
+        }
     }
     &__tomato {
         right: 113px;
         bottom: 136px;
+        @media (max-width: 1700px) {
+            right: 30px;
+        }
     }
 }
 .main {
@@ -82,6 +101,9 @@ body {
     &-text {
         flex: 0 0 40%;
         padding-top: 16px;
+        @media (max-width: 1340px) {
+            flex: 0 0 44%;
+        }
         &__description {
             font-size: 1.125rem;
             line-height: 1.5;
@@ -101,6 +123,9 @@ body {
             img {
                 border-radius: 100%;
                 box-shadow: 20px 30px 30px 0px rgba($color: $gray, $alpha: 0.4);
+                @media (max-width: 1340px) {
+                    width: 450px;
+                }
             }
         }
         &__btn {
@@ -135,6 +160,9 @@ body {
         &__01 {
             left: 56px;
             top: 45px;
+            @media (max-width: 1340px){
+                left: 8px;
+            }
             &::before {
                 left: 90px;
                 top: 23px;
@@ -143,6 +171,9 @@ body {
         &__02 {
             right: -2px;
             top: 193px;
+            @media (max-width: 1340px) {
+                right: -33px;
+            }
             &::before {
                 right: 95px;
                 top: 18px;
@@ -151,6 +182,9 @@ body {
         &__03 {
             right: 239px;
             bottom: -48px;
+            @media (max-width: 1340px) {
+                bottom: -60px;
+            }
             &::before {
                 right: 36px;
                 bottom: 55px;
@@ -233,6 +267,12 @@ body {
         padding: 2.875rem 2.437rem;
         transform: translate(0, 244px);
         transition: 0.4s ease;
+        @media (max-width: 1470px) {
+            transform: translate(0, 220px);
+        }
+        @media (max-width: 1340px) {
+            transform: translate(0, 250px);
+        }
         &__title {
             font-size: 1.875rem;
             font-family: 'Cormorant', serif;
@@ -244,6 +284,12 @@ body {
             max-width: 69%;
             margin-bottom: 2.625rem;
             line-height: 1.5;
+            @media (max-width: 1470px) {
+                max-width: 90%;
+            }
+            @media (max-width: 1340px) {
+                max-width: 100%;
+            }
         }
         &__link {
             color: rgba($color: $gray, $alpha: 0.8);
@@ -342,6 +388,9 @@ body {
         font-style: italic;
         text-align: center;
         margin-left: 5.25rem;
+        @media (max-width: 1340px) {
+            margin-left: 3rem;
+        }
         span {
             display: block;
             width: 87px;
@@ -427,6 +476,9 @@ body {
             margin-top: 1.5rem;
             width: 70%;
             min-height: 54px;
+            @media (max-width: 1340px) {
+                min-height: 82px;
+            }
         }
         &__price {
             font-size: 1.5rem;
@@ -437,11 +489,17 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 12px 2rem;
+    @media (max-width: 1340px) {
+        padding: 12px 1.5rem;
+    }
     &__button {
         padding: 1.5rem 3.25rem;
         outline: none;
         border: none;
         cursor: pointer;
+        @media (max-width: 1340px) {
+            padding: 1rem 2rem;
+        }
     }
 }
 .slider-count {
@@ -463,6 +521,11 @@ body {
         opacity: 0.4;
         transition: 0.3s ease;
         cursor: pointer;
+        background-repeat: no-repeat;
+        @media (max-width: 1340px) {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
         &:hover {
             opacity: 1;
         }
@@ -500,6 +563,10 @@ body {
         margin-right: 20px;
         margin-bottom: 20px;
         text-align: center;
+        @media (max-width: 1340px) {
+            max-width: 200px;
+            flex-basis: 200px; 
+        }
     }
     &-link {
         display: block;
@@ -556,10 +623,17 @@ body {
 }
 .catalog-text {
         padding-left: 2rem;
+        @media (max-width: 1340px) {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
         &__title {
             font-size: 1.875rem;
             font-family: 'Cormorant', serif;
             font-weight: 700;
+            @media (max-width: 1340px) {
+                min-height: 68px;
+            }
         }
         &__description {
             color: rgba($color: $gray, $alpha: 0.7);
@@ -568,6 +642,10 @@ body {
             margin-bottom: 0;
             width: 80%;
             min-height: 54px;
+            @media (max-width: 1340px) {
+                width: 100%;
+                min-height: 72px;
+            }
         }
         &__price {
             font-size: 1.5rem;
@@ -578,6 +656,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 1340px) {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
     &__button {
         font-size: 0.875rem;
         padding: 1.187rem 2.125rem;
@@ -585,6 +667,13 @@ body {
         outline: none;
         border: none;
         cursor: pointer;
+        @media (max-width: 1400px) {
+            margin: 0 10px 0 0;
+        }
+        @media (max-width: 1340px) {
+            width: 100%;
+            margin: 10px 10px 10px 10px;
+        }
     }
 }
 .catalog-count {
@@ -592,11 +681,17 @@ body {
     align-items: center;
     padding: 0.375rem 0.375rem;
     margin: 8px 0 0 20px;
+    @media (max-width: 1340px) {
+        margin: 0;
+    }
     &__number {
         font-size: 1.5rem;
         width: 2rem;
         border: none;
         text-align: center;
+        @media (max-width: 1340px) {
+            width: 5rem;
+        }
         &:focus {
             outline: none;
         }
