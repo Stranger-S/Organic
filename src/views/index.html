@@ -23,6 +23,7 @@
         <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
         <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
         <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
         <link rel="stylesheet" href="styles/main.css">
         <style>
@@ -30,6 +31,36 @@
         </style>
     </head>
     <body>
+                <!-- Modal -->
+        <div class="modal fade" id="menuModal" tabindex="-1" role="dialog" aria-labelledby="menuModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="menuModalLabel"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav-modal">
+                        <li class="nav-modal-item"><a class="nav-modal-link" href="#">Наша продукция</a></li>
+                        <li class="nav-modal-item"><a class="nav-modal-link" href="#">О компании</a></li>
+                        <li class="nav-modal-item"><a class="nav-modal-link" href="#">Новинки</a></li>
+                        <li class="nav-modal-item"><a class="nav-modal-link" href="#">Каталог</a></li>
+                        <li class="nav-modal-item"><a class="nav-modal-link" href="#">Доставка</a></li>
+                        <li class="nav-modal-item"><a class="nav-modal-link" href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <ul class="modal-footer-social">
+                        <li class="modal-footer-social__item"><a class="modal-footer-social__link modal-footer-social__vk" href="#" target="_blank"></a></li>
+                        <li class="modal-footer-social__item"><a class="modal-footer-social__link modal-footer-social__instagram" href="#" target="_blank"></a></li>
+                        <li class="modal-footer-social__item"><a class="modal-footer-social__link modal-footer-social__facebook" href="#" target="_blank"></a></li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
         <section class="section-main">
             @@include("../blocks/modules/header/header.html") 
             <div class="wrapper">
@@ -37,23 +68,45 @@
                     <div class="main-text">
                         <h1 class="title">Здоровая еда - <br><span>это просто</span>! </h1>
                         <div class="ml">
-                            <p class="main-text__description">Сеть магазинов полезных продуктов питания, производство которых основано на принципах и&nbsp;стандартах органического чистых продуктов</p>
+                            <p class="main-text__description">Сеть магазинов полезных продуктов питания, производство которых основано на&nbsp;принципах и&nbsp;стандартах органического чистых продуктов</p>
+                            <img class="main-text__image" src="../img/image-main.png" alt="main">
                             <a class="btn" href="">Перейти в каталог</a>
                         </div>
                     </div>
                     <div class="main-visual">
                         <div class="main-visual__image">
-                            <img src="../img/image-main.png" alt="">
+                            <img src="../img/image-main.png" alt="main">
                         </div>
-                        <button class="main-visual__btn main-visual__01">
-                            Авокадо <span>134 руб</span>
-                        </button>
-                        <button class="main-visual__btn main-visual__02">
-                            Картофель <span>169 руб</span>
-                        </button>
-                        <button class="main-visual__btn main-visual__03">
-                            Томаты <span>215 руб</span>
-                        </button>
+                        <div>
+                            <button class="main-visual__btn main-visual__01"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Авокадо <span>134 руб</span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu__01" aria-labelledby="dropdownMenuButton">
+                                <h5 class="dropdown-menu__title">Авокадо</h5>
+                                <p class="dropdown-menu__text">Авокадо,<br>Свежий урожай, 1кг</p>
+                                <p class="dropdown-menu__price">134 руб/кг</p>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="main-visual__btn main-visual__02 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Картофель <span>169 руб</span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu__02" aria-labelledby="dropdownMenuButton">
+                                <h5 class="dropdown-menu__title">Картофель</h5>
+                                <p class="dropdown-menu__text">Картофель Молодой,<br>Свежий урожай, 1кг</p>
+                                <p class="dropdown-menu__price">169 руб/кг</p>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="main-visual__btn main-visual__03"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Томаты <span>215 руб</span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu__03" aria-labelledby="dropdownMenuButton">
+                                <h5 class="dropdown-menu__title">Томаты</h5>
+                                <p class="dropdown-menu__text">Томаты,<br>Свежий урожай, 1кг</p>
+                                <p class="dropdown-menu__price">215 руб/кг</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -131,7 +184,7 @@
                 <div class="box-advantage">
                     <div class="box-advantage-item">
                         <div class="ml">
-                            <p class="box-advantage__text">Мы полностью контролируем весь цикл производства – от поля до прилавка за счет собственной серьезной материальной и научной базы. Наш подход направлен на высокие технологии и достижения прогресса.</p>
+                            <p class="box-advantage__text">Мы полностью контролируем весь цикл производства – от поля до прилавка за счет собственной серьезной материальной и научной базы. Наш&nbsp;подход направлен на высокие технологии и&nbsp;достижения прогресса.</p>
                         </div>
                     </div>
                     <div class="box-advantage-item">
@@ -344,7 +397,7 @@
                         </div>
                         <div class="catalog-text">
                             <h3 class="catalog-text__title">Моцарелла</h3>
-                            <p class="catalog-text__description">Моцарелла Healthy food  45%, 0.125 кг</p>
+                            <p class="catalog-text__description">Моцарелла Healthy food  45%, 0.125 кг</p>
                             <p class="catalog-text__price">359 руб/шт</p>
                         </div>
                         <div class="catalog-footer">
@@ -380,7 +433,7 @@
                         </div>
                         <div class="catalog-text">
                             <h3 class="catalog-text__title">Йогурт термостатный</h3>
-                            <p class="catalog-text__description">Йогурт Healthy food термостатный с фруктово-ягодным 2,5 %, 165 г</p>
+                            <p class="catalog-text__description">Йогурт Healthy food термостатный с фруктово-ягодным 2,5 %, 165 г</p>
                             <p class="catalog-text__price">159 руб/шт</p>
                         </div>
                         <div class="catalog-footer">
@@ -438,7 +491,7 @@
                 <div class="box-delivery">
                     <div class="box-delivery-item">
                         <div class="ml">
-                            <p class="box-delivery__text">Мы доставляем ваши заказы курьером в специально оборудованном транспорте.</p>
+                            <p class="box-delivery__text box-delivery__text-01">Мы доставляем ваши заказы курьером в&nbsp;специально оборудованном транспорте.</p>
                             <p class="box-delivery__text">Компания Healthly food предлагает самые удобные и быстрые способы доставки по всей стране. Посмотреть подробные условия и географию вы&nbsp;можете по этой <a class="box-delivery__link" href="#">ссылке</a></p>
                         </div>
                     </div>
@@ -474,7 +527,7 @@
                             <label class="form__label" for="">Ваш телефон</label>
                             <input class="form__input" type="text" placeholder="Ваш телефон">
                             <button class="btn form__button">заказать звонок</button>
-                            <p class="form__text">Нажимая на кнопку вы подтверждаете свое согласие на обработку<br><a class="form__link" href="">персональных данных</a>.</p>
+                            <p class="form__text">Нажимая на кнопку вы подтверждаете свое согласие на обработку <a class="form__link" href="">персональных данных</a>.</p>
                         </form>
                     </div>
                 </div>
@@ -484,6 +537,8 @@
         <script src="js/main.js"></script>
         <script src="js/vendor.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script>
             $('.slider').slick({
@@ -495,17 +550,21 @@
                 slidesToScroll: 1,
                 responsive: [
                     {
-                    breakpoint: 600,
+                    breakpoint: 1201,
                     settings: {
                         slidesToShow: 2,
-                        slidesToScroll: 1
+                        slidesToScroll: 2,
+                        dots: true,
+                        arrows: false
                     }
                     },
                     {
-                    breakpoint: 480,
+                    breakpoint: 561,
                     settings: {
                         slidesToShow: 1,
-                        slidesToScroll: 1
+                        slidesToScroll: 1,
+                        dots: true,
+                        arrows: false
                     }
                     }
                 ]

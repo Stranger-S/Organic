@@ -1,42 +1,106 @@
 .footer {
     border-top: 1px solid rgba($color: $gray, $alpha: 0.2);
     padding-top: 78px;
+    @media (max-width: 340px) {
+        padding-top: 32px;
+    }
 }
 .box-footer {
     display: flex;
     justify-content: space-between;
+    @media (max-width: 900px) {
+        flex-direction: column;
+    }
     &__logo {
         height: 48px;
         width: 179px;
-        margin-top: 6px;
+        margin-top: 14px;
+        @media (max-width: 900px) {
+            margin: 0 auto 30px;
+        }
+        @media (max-width: 340px) {
+            width: 120px;
+            margin-bottom: 17px;
+        }
     }
     &-item {
         flex: 0 0 66.4%;
         display: flex;
         justify-content: space-between;
+        @media (max-width: 1200px) {
+            flex: 0 0 75%;
+        }
+        @media (max-width: 900px) {
+            flex-direction: column;
+        }
     }
     &-info {
+        @media (max-width: 900px) {
+            margin-bottom: 30px;
+        }
+        @media (max-width: 340px) {
+            margin-bottom: 14px;
+        }
         &:last-child {
             text-align: right;
+            @media (max-width: 900px) {
+                text-align: center;
+            }
         }
     }
     &-list {
         list-style-type: none;
         &__item {
-            margin-bottom: 28px;
+            margin-bottom: 20px;
             font-size: 1.125rem;
+            @media (max-width: 900px) {
+                margin-bottom: 15px;
+            }
+            @media (max-width: 340px) {
+                font-size: 1rem;
+            }
+            @media (max-width: 340px) {
+                margin-bottom: 8px;
+            }
+        }
+        &__item-tel {
+            @media (max-width: 340px) {
+                margin-bottom: 0;
+            }
         }
         &__link {
             text-decoration: none;
             font-size: 1.125rem;
             color: $gray;
             transition: 0.3s ease;
+            @media (max-width: 340px) {
+                font-size: 1rem;
+            }
             &:hover {
                 color: $orange;
             }
         }
         &__tel {
             font-size: 1.687rem;
+            @media (max-width: 900px) {
+                font-size: 1.875rem;
+            }
+            @media (max-width: 340px) {
+                font-size: 2.5rem;
+                margin-bottom: 10px;
+            }
+        }
+        &-nav {
+            @media (max-width: 900px) {
+                display: flex;
+                justify-content: space-between;
+                max-width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            @media (max-width: 340px) {
+                max-width: 240px;
+            }
         }
     }
 }
@@ -45,7 +109,17 @@
     justify-content: space-between;
     align-items: center;
     list-style-type: none;
-    padding-top: 6px;
+    padding-top: 12px;
+    @media (max-width: 900px) {
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 40px;
+    }
+    @media (max-width: 340px) {
+        padding-top: 32px;
+        max-width: 208px;
+    }
     &__link {
         display: block;
         width: 48px;
@@ -77,10 +151,23 @@
 .box-copyright {
     display: flex;
     justify-content: space-between;
-    padding-top: 40px;
-    padding-bottom: 48px;
+    padding-top: 56px;
+    padding-bottom: 44px;
+    @media (max-width: 900px) {
+        flex-direction: column;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    @media (max-width: 340px) {
+        font-size: 0.83rem;
+        padding-top: 14px;
+        padding-bottom: 0;
+    }
     &__copy {
         opacity: 0.6;
+        @media (max-width: 340px) {
+            margin-bottom: 0.5rem;
+        }
     }
     &__text {
         color: rgba($color: $gray, $alpha: 0.6);
@@ -88,6 +175,9 @@
     &__link {
         text-decoration: none;
         color: rgba($color: $gray, $alpha: 0.6);
+        @media (max-width: 340px) {
+            font-size: 0.83rem;
+        }
         &:hover {
             color: $gray;
         }
